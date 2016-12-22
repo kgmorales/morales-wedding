@@ -11,20 +11,20 @@
 }
 
 .content-slide img {
-    width: 70%;
+    width: 80%;
 }
 
 .fp-controlArrow.fp-next {
-    border-color: transparent transparent transparent #FF6363 !important;
+    border-color: transparent transparent transparent #FF6363 ;
     right: 45px !important;
 }
 
 .fp-controlArrow.fp-prev {
-    border-color: transparent #FF6363 transparent transparent !important;
+    border-color: transparent #FF6363 transparent transparent;
     left: 45px !important;
 }
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background: rgba(0, 0, 0, 0.62) !important;
+    background: rgba(0, 0, 0, 0.62);
 }

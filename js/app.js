@@ -14,9 +14,6 @@ $(document).ready(function() {
 
     })(jQuery);
 
-    // input text for typing animation 
-    $("#holder").writeText("WEB DESIGNER + FRONT-END DEVELOPER");
-
     // initialize wow.js
     new WOW().init();
 
@@ -28,14 +25,14 @@ $(document).ready(function() {
             }, 200);
 
             $('body').animate({
-                right: "285px"
+                right: "300px"
             }, 200);
         });
 
         // Then push them back */
         $('.fa-times').click(function() {
             $('.nav-screen').animate({
-                right: "-285px"
+                right: "-300px"
             }, 200);
 
             $('body').animate({
@@ -45,7 +42,7 @@ $(document).ready(function() {
 
         $('.nav-links a').click(function() {
             $('.nav-screen').animate({
-                right: "-285px"
+                right: "-300px"
             }, 500);
 
             $('body').animate({
@@ -61,41 +58,38 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         scrollBar: true,
         responsiveWidth: 400,
+        lazyLoading: true,
         navigation: true,
-        navigationTooltips: ['home', 'about', 'information', 'contact', 'connect'],
-        anchors: ['home', 'about', 'information', 'contact', 'connect'],
+        navigationTooltips: ['welcome', 'about', 'pictures', 'faq', 'contact', 'connect'],
+        anchors: ['welcome', 'about', 'pictures', 'faq', 'contact', 'connect'],
         menu: '#myMenu',
         fitToSection: false,
-
+        css3: true,
+        slidesNavigation: true,
+        afterRender: function() {
+          $('#fullpage .section').each(function(index, value) {
+            var id = $(this).attr('id');
+            if ($(this).attr('data-anchor') != undefined) {
+              $(this).attr('id', 'fullpaged-' + id);
+            }
+          });
+        },
         afterLoad: function(anchorLink, index) {
-            var loadedSection = $(this);
-
-
-            //using index
-            if (index == 1) {
-                /* add opacity to arrow */
-                $('.fa-chevron-down').each(function() {
-                    $(this).css('opacity', '1')
-                });
-                $('.header-links a').each(function() {
-                    $(this).css('color', 'white')
-                });
-            } else if (index != 1) {
-                $('.header-links a').each(function() {
-                    $(this).css('color', 'black')
-                });
-            }
-
-            //using index
-            if (index == 2) {
-
-                /* animate skill bars */
-                $('.skillbar').each(function() {
-                    $(this).find('.skillbar-bar').animate({
-                        width: jQuery(this).attr('data-percent')
-                    }, 2500);
-                });
-            }
+          var loadedSection = $(this);
+          //using index
+          if (index == 1) {
+            /* add opacity to arrow */
+            $('.fa-chevron-down').each(function() {
+              $(this).css('opacity', '1')
+            });
+            $('.header-links a').each(function() {
+              $(this).css('color', 'white')
+            });
+          } else if (index != 1) {
+            $('.header-links a').each(function() {
+              $(this).css('color', 'black')
+            });
+          }
         }
     });
 
@@ -106,16 +100,25 @@ $(document).ready(function() {
     });
 
     // fullpage.js link navigation
+    $(document).on('click', '#welcome', function() {
+        $.fn.fullpage.moveTo(1);
+    });
     $(document).on('click', '#about', function() {
         $.fn.fullpage.moveTo(2);
     });
 
-    $(document).on('click', '#information', function() {
+    $(document).on('click', '#pictures', function() {
         $.fn.fullpage.moveTo(3);
+    });
+    $(document).on('click', '#faq', function() {
+        $.fn.fullpage.moveTo(4);
     });
 
     $(document).on('click', '#contact', function() {
-        $.fn.fullpage.moveTo(4);
+        $.fn.fullpage.moveTo(5);
+    });
+    $(document).on('click', '#connect', function() {
+        $.fn.fullpage.moveTo(6);
     });
 
     // smooth scrolling

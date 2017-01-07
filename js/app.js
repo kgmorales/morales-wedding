@@ -244,7 +244,7 @@ function initialize() {
 
 function calcRoute() {
     var start = document.getElementById('start').value;
-    var end = document.getElementById('end').value;
+    var end = 'Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233';
 
     var request = {
         origin: start,

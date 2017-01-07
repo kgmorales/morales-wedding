@@ -7,47 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Dancing+Script|Poiret+One' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/css/app.min.css">
 </head>
 
 <body>
- 	<!-- navbar header -->
-  <div class="nav-header">
-        <i class="fa fa-bars fa-3x"></i>
-        <div class="header-links">
-            <ul>
-                <li data-menuanchor="sixthPage"><a href="#connect">Connect</a></li>
-                <li data-menuanchor="fifthPage"><a href="#contact">Contact</a></li>
-                <li data-menuanchor="fourthPage"><a href="#faq">FAQ</a></li>
-                <li data-menuanchor="thirdPage"><a href="#pictures">Pictures</a></li>
-                <li data-menuanchor="secondPage"><a href="#about">Our Story</a></li>
-            </ul>
-        </div>
-  </div>
-    <!-- end navbar header -->
-    <!-- sidebar slider -->
-    <div class="nav-screen">
-        <i class="fa fa-times fa-3x"></i>
-        <div class="nav-container">
-            <div class="nav-links">
-                <ul id='myMenu'>
-                    <li data-menuanchor="firstPage"><a href="#welcome">Welcome</a></li>
-                    <li data-menuanchor="secondPage"><a href="#about">Our Story</a></li>
-                    <li data-menuanchor="thirdPage"><a href="#pictures">Pictures</a></li>
-                    <li data-menuanchor="fourthPage"><a href="#faq">FAQ</a></li>
-                    <li data-menuanchor="fifthPage"><a href="#contact">Contact</a></li>
-                    <li data-menuanchor="sixthPage"><a href="#connect">Connect</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- end navbar slider -->
+    <!-- navbar header -->
     <!-- begin fullpage -->
-    <div id="fullpage">
-        <!-- begin section -->
-        <div class="section welcome" data-anchor="home">
+    <!-- begin section -->
+    <section id="welcome" class="welcome">
+        <div class="container">
             <div class="opaque-bg animated fadeInDown">
                 <h1 class="headline">Morales Wedding</h1>
                 <h4 class="date">October 14, 2017</h4>
@@ -71,108 +41,280 @@
                         </li>
                     </ul>
                 </div>
-                <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
             </div>
         </div>
-        <!-- end section -->
-        <!-- begin section -->
-        <div class="section" data-anchor="about">
-            <div class="content">
-                <h1 class="wow fadeInDown" data-wow-delay="0.2s">About Us</h1>
-                <img class="avatar wow fadeInDown" data-src="images/avatar.jpg">
-                <p class="wow fadeInDown" data-wow-delay="0.2s">Welcome to our wedding website! Although you will receive detailed pictures in your invitation, this website will give you all the pictures you need to know leading up to our big day. Since our wedding is semi-destination and our guests will be travelling from out of town, this is the easiest way for us to communicate maps, directions, and hotel accommodations. Looking forward to celebrating with everyone!</p>
-                <h3 class="wow fadeInDown sign">Kevin &amp; Nicole</h3>
+    </section>
+    <!-- end section -->
+    <nav class="wow fadeInDown">
+        <ul class="wow fadeInDown">
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#pictures">Pictures</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#registry">Registry</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#connect">Connect</a></li>
+        </ul>
+    </nav>
+    <!-- end navbar header -->
+    <!-- sidebar slider -->
+    <div class="nav-screen">
+        <i class="fa fa-times fa-3x"></i>
+        <div class="nav-container">
+            <div class="nav-links">
+                <ul id='myMenu'>
+                    <li data-menuanchor="firstPage"><a href="#welcome">Welcome</a></li>
+                    <li data-menuanchor="secondPage"><a href="#about">Our Story</a></li>
+                    <li data-menuanchor="thirdPage"><a href="#pictures">Pictures</a></li>
+                    <li data-menuanchor="fourthPage"><a href="#location">Location</a></li>
+                    <li data-menuanchor="fourthPage"><a href="#hotels">Hotels</a></li>
+                    <li data-menuanchor="fourthPage"><a href="#registry">Registry</a></li>
+                    <li data-menuanchor="fourthPage"><a href="#faq">FAQ</a></li>
+                    <li data-menuanchor="fifthPage"><a href="#contact">Contact</a></li>
+                    <li data-menuanchor="sixthPage"><a href="#connect">Connect</a></li>
+                </ul>
             </div>
         </div>
-        <!-- end section -->
-        <!-- begin section -->
-        <div class="section" data-anchor="pictures">
-                <div class="content-slide">
-                    <div class="slide">
-                        <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg.jpg">
-                    </div>
-                    <div class="slide">
-                        <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg-gray.jpg">
-                    </div>
-                    <div class="slide">
-                        <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg.jpg">
-                    </div>
-                    <div class="slide">
-                        <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg-gray.jpg">
-                    </div>
-                    <div class="slide">
-                        <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg.jpg">
-                    </div>
-                    <div class="slide">
-                        <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg.jpg">
-                    </div>
-                </div>
-        </div>
-        <!-- end section -->
-        <div class="section" data-anchor="faq">
-            <div class="content">
-                <h1 class="wow fadeInDown" data-wow-delay="0.2s">FAQ</h1>
-                <div class="box">
-                	<div class="1">1</div>
-                	<div class="2">2</div>
-                	<div class="3">3</div>
-                </div>
-            </div>
-        </div>
-        <!-- end section -->
-        <!-- begin section -->
-        <div class="section" data-anchor="contact">
-            <div class="content wow fadeInDown" data-wow-delay="0.2s">
-                <h1>Contact Us</h1>
-                <p>Whether you have questions or just </p>
-                <br>
-                <div class="contact-form">
-                    <div id="form-messages"></div>
-                    <form id="ajax-contact" method="post" role="form" action="contact.php" data-toggle="validator">
-                        <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL" data-error="Field can't be blank!" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
-                            <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="hidden">
-                            <input type="text" class="form-control" id="human" name="human" placeholder="">
-                        </div>
-                        <div class="wow fadeInUp" data-wow-delay="1s">
-                            <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
-                        </div>
-                    </form>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <!-- end section -->
-        <!-- begin section -->
-        <div class="section fp-auto-height">
-            <div class="footer">
-                <p>Connect With Us</p>
-                <div class="social-links">
-                    <span><a href="https://www.linkedin.com/in/bradleyengelhardt" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></span>
-                    <span><a target="_blank" href="https://twitter.com/bradengelhardt" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></span>
-                    <span><a href="https://github.com/SquishyAndroid" target="_blank"><i class="fa fa-github fa-2x"></i></a></span>
-                    <span><a href="http://codepen.io/SquishyAndroid/pens/public/"><i class="fa fa-codepen fa-2x"></i></a></span>
-                </div>
-            </div>
-        </div>
-        <!-- end section -->
     </div>
-    <!-- end fullpage -->
+    <!-- end navbar slider -->
+    <!-- begin section -->
+    <section id="about">
+        <h1 class="wow fadeInDown titles" data-wow-delay="0.2s">About Us</h1>
+        <div class="content aboutme">
+            <img class="avatar wow fadeInDown" src="images/avatar.jpg">
+            <p class="wow fadeInDown" data-wow-delay="0.2s">Welcome to our wedding website! Although you will receive detailed pictures in your invitation, this website will give you all the pictures you need to know leading up to our big day. Since our wedding is semi-destination and our guests will be travelling from out of town, this is the easiest way for us to communicate maps, directions, and hotel accommodations. Looking forward to celebrating with everyone!</p>
+            <h5 class="wow fadeInDown sign">Kevin &amp; Nicole</h5>
+            <div id="slider">
+                <div><img data-lazy="images/1.jpg"></div>
+                <div><img data-lazy="images/2.jpg"></div>
+                <div><img data-lazy="images/3.jpg"></div>
+                <div><img data-lazy="images/4.jpg"></div>
+                <div><img data-lazy="images/5.jpg"></div>
+                <div><img data-lazy="images/6.jpg"></div>
+                <div><img data-lazy="images/7.jpg"></div>
+                <div><img data-lazy="images/8.jpg"></div>
+                <div><img data-lazy="images/9.jpg"></div>
+                <div><img data-lazy="images/10.jpg"></div>
+                <div><img data-lazy="images/11.jpg"></div>
+                <div><img data-lazy="images/12.jpg"></div>
+                <div><img data-lazy="images/13.jpg"></div>
+                <div><img data-lazy="images/14.jpg"></div>
+                <div><img data-lazy="images/15.jpg"></div>
+                <div><img data-lazy="images/16.jpg"></div>
+                <div><img data-lazy="images/17.jpg"></div>
+                <div><img data-lazy="images/18.jpg"></div>
+                <div><img data-lazy="images/19.jpg"></div>
+                <div><img data-lazy="images/20.jpg"></div>
+                <div><img data-lazy="images/21.jpg"></div>
+                <div><img data-lazy="images/22.jpg"></div>
+                <div><img data-lazy="images/23.jpg"></div>
+                <div><img data-lazy="images/24.jpg"></div>
+                <div><img data-lazy="images/25.jpg"></div>
+                <div><img data-lazy="images/26.jpg"></div>
+                <div><img data-lazy="images/27.jpg"></div>
+            </div>
+        </div>
+    </section>
+    <!-- end section -->
+    <!-- begin section -->
+    <!-- <section id="pictures">
+        <h1 class="wow fadeInDown titles" data-wow-delay="0.2s">Pictures</h1>
+        <div class="content-slide">
+            <div class="slide">
+                <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg.jpg">
+            </div>
+            <div class="slide">
+                <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg-gray.jpg">
+            </div>
+            <div class="slide">
+                <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg.jpg">
+            </div>
+            <div class="slide">
+                <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg-gray.jpg">
+            </div>
+            <div class="slide">
+                <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg.jpg">
+            </div>
+            <div class="slide">
+                <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="dist/images/bg.jpg">
+            </div>
+        </div>
+    </section> -->
+    <!-- begin section -->
+    <section id="location">
+        <div class="content">
+            <h1 class="wow fadeInDown titles" data-wow-delay="0.2s">Location</h1>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-5">
+                    <div class="col-sm-12 middle-sm">
+                        <img src="images/pabst.jpg">
+                    </div>
+                    <div class="col-sm-12">
+                        <h4>Time</h4><span> Ceremony with Reception immediately following October 14, 2017 5:00 pm to 12:00 am</span>
+                        <h4>Address:</h4><span>Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233</span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="map-canvas"></div>
+                    <div id="panel">
+                        <div class="row center-sm">
+                            <form>
+                                <div class="col-xs-12">
+                                    <label>Your Address: </label>
+                                    <input id="start" placeholder="Home" value="1410 Museum Campus Dr, Chicago, IL 60605" type="text">
+                                </div>
+                                <div class="col-xs-12">
+                                    <label>Destination: </label>
+                                    <input id="end" value="Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233" placeholder="Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233" type="text">
+                                </div>
+                                <div class="end-sm col-xs-4">
+                                    <input type="button" class="btn btn-map" value="Update" onclick="calcRoute();">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- begin section -->
+    <section id="hotels">
+        <h1 class="wow fadeInDown titles" data-wow-delay="0.2s">Hotels</h1>
+        <div class="content">
+            <div class="tables">
+                <div class="column">
+                    <div class="pt">
+                        <div class="price-titles">
+                            DoubleTree by Hilton
+                        </div>
+                        <div class="price-price">
+                            <sup>$</sup><span class="num">159</span><sub>/night</sub>
+                        </div>
+                        <div class="price-row">
+                            <h5>Address</h5> 611 W. Wisconsin Avenue Milwaukee, Wisconsin 53203
+                        </div>
+                        <div class="price-row">
+                            <i class="icon ion-checkmark"></i>stuff
+                        </div>
+                        <div class="price-btn-cont">
+                            <a class="btn btn-table">Get this deal</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="pt">
+                        <div class="price-titles">
+                            Brewhouse Suites
+                        </div>
+                        <div class="price-price">
+                            <sup>$</sup><span class="num">259</span><sub>/night</sub>
+                        </div>
+                        <div class="price-row">
+                            <i class="icon ion-checkmark"></i>Unlimited download
+                        </div>
+                        <div class="price-row">
+                            <i class="icon ion-checkmark"></i>Unlimited download
+                        </div>
+                        <div class="price-btn-cont">
+                            <a class="btn btn-table">Get this deal</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="pt">
+                        <div class="price-titles">
+                            Hotel Metro
+                        </div>
+                        <div class="price-price">
+                            <sup>$</sup><span class="num">219</span><sub>/night</sub>
+                        </div>
+                        <div class="price-row">
+                            <i class="icon ion-checkmark"></i>Unlimited download
+                        </div>
+                        <div class="price-row">
+                            <i class="icon ion-checkmark"></i>Unlimited download
+                        </div>
+                        <div class="price-btn-cont">
+                            <a class="btn btn-table">Reserve</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- begin section -->
+    <section id="registry">
+        <div class="content">
+            <h1 class="wow fadeInDown titles" data-wow-delay="0.2s">Registry</h1>
+            <div class="row">
+                <div class="col-sm-12 logo">
+                    <img class="wow fadeInDown" src="images/amazon.svg">
+                </div>
+                <div class="col-sm-12 logo">
+                    <img class="wow fadeInDown" src="images/amazon.svg">
+                </div>
+                <div class="col-sm-12 logo">
+                    <img class="wow fadeInDown" src="images/amazon.svg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- begin section -->
+    <section id="faq">
+        <div class="content">
+            <h1 class="wow fadeInDown" data-wow-delay="0.2s">FAQ</h1>
+        </div>
+    </section>
+    <!-- begin section -->
+    <section id="contact">
+        <div class="content wow fadeInDown" data-wow-delay="0.2s">
+            <h1 class="titles">Contact Us</h1>
+            <p>Whether you have questions or just </p>
+            <br>
+            <div class="contact-form">
+                <div id="form-messages"></div>
+                <form id="ajax-contact" method="post" role="form" action="contact.php" data-toggle="validator">
+                    <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL" data-error="Field can't be blank!" required>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+                        <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="hidden">
+                        <input type="text" class="form-control" id="human" name="human" placeholder="">
+                    </div>
+                    <div class="wow fadeInUp" data-wow-delay="1s">
+                        <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
+                    </div>
+                </form>
+                <br>
+            </div>
+        </div>
+    </section>
+    <!-- begin section -->
+    <div class="footer">
+        <p>Connect With Us</p>
+        <div class="social-links">
+            <!--             <span><a href="https://www.linkedin.com/in/bradleyengelhardt" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></span>
+            <span><a target="_blank" href="https://twitter.com/bradengelhardt" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></span>
+            <span><a href="https://github.com/SquishyAndroid" target="_blank"><i class="fa fa-github fa-2x"></i></a></span>
+            <span><a href="http://codepen.io/SquishyAndroid/pens/public/"><i class="fa fa-codepen fa-2x"></i></a></span> -->
+            <p>Made by <a target="_blank" href="https://twitter.com/gnarfugh" alt="@gnarfugh" target="_blank"><i class="twa twa-2x twa-crystal-ball"></i></a> with <i class="twa twa-2x twa-coffee"></i> &amp; 17 reminders from <a target="_blank" href="https://twitter.com/nicoleinone" target="_blank" alt="@nicoleinone"><i class="twa twa-2x twa-information-desk-person-type-1-2"></i></a>
+        </div>
+    </div>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.8/slick.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="dist/js/app.min.js" type="text/javascript"></script>
 </body>
 

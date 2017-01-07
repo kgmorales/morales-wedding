@@ -44,7 +44,6 @@ gulp.task('serve', ['scss'], function() {
 //paths to bower_components
 var PATHS = {
   javascript: [
-    'js/fullpage.js',
     'js/wow.js',
     'js/jquery-easing.js',
     'js/app.js'

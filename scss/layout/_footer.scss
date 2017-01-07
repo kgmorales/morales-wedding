@@ -4,6 +4,7 @@
     background-color: #484848;
     height: 100px;
     padding-top: 10px;
+    text-align:center;
 }
 
 .footer p {
@@ -12,13 +13,17 @@
     font-size: 16px;
 }
 
+.footer i {
+    color: #FF6363;
+}
+
 .social-links a {
-    color: white;
+    color: #FF6363;
     padding: 0px 5px 0px 5px;
 }
 
 .social-links a:hover {
-    color: #FF6363;
+    color: white;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;

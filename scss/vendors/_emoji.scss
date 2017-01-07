@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.twa {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1em 1em;
+}
+
+.twa-2x {
+    height: 2em;
+    width: 2em;
+    margin: 0 0.1em 0 0.2em;
+    vertical-align: -0.2em;
+    background-size: 2em 2em;
+}
+
+.twa-crystal-ball {
+    background-image: url("https://twemoji.maxcdn.com/2/svg/1f52e.svg");
+}
+
+.twa-information-desk-person-type-1-2 {
+    background-image: url("https://twemoji.maxcdn.com/2/svg/1f481-1f3fb.svg");
+}
+
+.twa-coffee {
+    background-image: url("https://twemoji.maxcdn.com/2/svg/2615.svg");
+}

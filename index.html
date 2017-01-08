@@ -148,21 +148,21 @@
             <div class="row center-sm middle-sm">
                 <div class="col-sm-6">
                     <div class="row center-sm" id="panel">
-                    <div class="col-sm-8 form-control">
-                        <h1 class="wow fadeInDown" data-wow-delay="0.2s">Address</h1>
-                        <p> Grand Hall at Pabst Best Place 901 W. Juneau Ave Milwaukee, WI 53233</p>
-                    </div>
-                    <div class="col-sm-8 form-control">
-                        <form>
-                        <h1 class="wow fadeInDown" data-wow-delay="0.2s">Get Directions</h1>
-                            <div class="col-xs-12">
-                                <label>Your Address: </label>
-                                <input id="start" placeholder="Home" value="1410 Museum Campus Dr, Chicago, IL 60605" type="text">
-                            </div>
-                            <div class="col-xs-offset-4 col-xs-4">
-                                <input type="button" class="btn btn-map" value="Update" onclick="calcRoute();">
-                            </div>
-                        </form>
+                        <div class="col-sm-8 form-control">
+                            <h1 class="wow fadeInDown" data-wow-delay="0.2s">Address</h1>
+                            <p> Grand Hall at Pabst Best Place 901 W. Juneau Ave Milwaukee, WI 53233</p>
+                        </div>
+                        <div class="col-sm-8 form-control">
+                            <form>
+                                <h1 class="wow fadeInDown" data-wow-delay="0.2s">Get Directions</h1>
+                                <div class="col-xs-12">
+                                    <label>Your Address: </label>
+                                    <input id="start" placeholder="Home" value="1410 Museum Campus Dr, Chicago, IL 60605" type="text">
+                                </div>
+                                <div class="col-xs-offset-4 col-xs-4">
+                                    <input type="button" class="btn btn-map" value="Update" onclick="calcRoute();">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -174,66 +174,86 @@
     <!-- begin section -->
     <section id="hotels">
         <h1 class="wow fadeInDown titles" data-wow-delay="0.2s">Hotels</h1>
-        <div class="content">
-            <div class="tables">
-                <div class="column">
-                    <div class="pt">
-                        <div class="price-titles">
-                            DoubleTree by Hilton
-                        </div>
-                        <div class="price-price">
-                            <sup>$</sup><span class="num">159</span><sub>/night</sub>
-                        </div>
-                        <div class="price-row">
-                            <h5>Address</h5> 611 W. Wisconsin Avenue Milwaukee, Wisconsin 53203
-                        </div>
-                        <div class="price-row">
-                            <i class="icon ion-checkmark"></i>stuff
-                        </div>
-                        <div class="price-btn-cont">
-                            <a class="btn btn-table">Get this deal</a>
-                        </div>
+        <div class="tables row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="pt">
+                    <div class="price-titles">
+                        DoubleTree by Hilton
                     </div>
-                </div>
-                <div class="column">
-                    <div class="pt">
-                        <div class="price-titles">
-                            Brewhouse Suites
-                        </div>
-                        <div class="price-price">
-                            <sup>$</sup><span class="num">259</span><sub>/night</sub>
-                        </div>
-                        <div class="price-row">
-                            <i class="icon ion-checkmark"></i>Unlimited download
-                        </div>
-                        <div class="price-row">
-                            <i class="icon ion-checkmark"></i>Unlimited download
-                        </div>
-                        <div class="price-btn-cont">
-                            <a class="btn btn-table">Get this deal</a>
-                        </div>
+                    <div class="price-price">
+                        <sup>$</sup><span class="num">159</span><sub>/night</sub>
                     </div>
-                </div>
-                <div class="column">
-                    <div class="pt">
-                        <div class="price-titles">
-                            Hotel Metro
-                        </div>
-                        <div class="price-price">
-                            <sup>$</sup><span class="num">219</span><sub>/night</sub>
-                        </div>
-                        <div class="price-row">
-                            <i class="icon ion-checkmark"></i>Unlimited download
-                        </div>
-                        <div class="price-row">
-                            <i class="icon ion-checkmark"></i>Unlimited download
-                        </div>
-                        <div class="price-btn-cont">
-                            <a class="btn btn-table">Reserve</a>
-                        </div>
+                    <div class="price-row">
+                        <i class="fa fa-map-marker fa-2x"></i> <span>611 W. Wisconsin Avenue Milwaukee, Wisconsin 53203</span>
+                    </div>
+                    <div class="price-row">
+                        <i class="fa fa-phone fa-2x"></i><span>(414) 273-2950</span>
+                    </div>
+                    <div class="price-row">
+                        <i class="fa fa-info fa-2x"></i> <span>Transportation will be provided to and from this location.</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Group Name: <strong>Adams/Morales Wedding</strong></span></br>
+                        <span>Group Code: <strong>MAW</strong></span>
+                    </div>
+                    <div class="price-btn-cont">
+                        <button class="btn btn-table">Reserve</button>
                     </div>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="pt">
+                    <div class="price-titles">
+                        BrewHouse Suites
+                    </div>
+                    <div class="price-price">
+                        <sup>$</sup><span class="num">259</span><sub>/night</sub>
+                    </div>
+                    <div class="price-row">
+                        <i class="fa fa-map-marker fa-2x"></i> 611 W. Wisconsin Avenue Milwaukee, Wisconsin 53203
+                    </div>
+                    <div class="price-row">
+                        <i class="fa fa-phone fa-2x"></i><span>414-273-2950</span>
+                    </div>
+                    <div class="price-row">
+                        <i class="fa fa-info fa-2x"></i> <span>Right next to the venue! Easy walk to your room, no transportation needed. Discounted valet parking of $23 available at time of booking ($26 at check in).</span>
+                    </div>
+                    <div class="price-row">
+                        Reference Group ID: <strong>ADAMOR</strong>
+                    </div>
+                    <div class="price-btn-cont">
+                        <a href="https://reservations.brewhousesuites.com/IRMNet/(S(thhrluzicjtczhsnl4barohn))/login.aspx" target="_blank">
+                            <button class="btn btn-table">Reserve</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="pt">
+                    <div class="price-titles">
+                        Hotel Metro
+                    </div>
+                    <div class="price-price">
+                        <sup>$</sup><span class="num">159</span><sub>/night</sub>
+                    </div>
+                    <div class="price-row">
+                        <i class="fa fa-map-marker fa-2x"></i> 611 W. Wisconsin Avenue Milwaukee, Wisconsin 53203
+                    </div>
+                    <div class="price-row">
+                        <i class="fa fa-phone fa-2x"></i><span>414-273-2950</span>
+                    </div>
+                    <div class="price-row">
+                        <i class="fa fa-info fa-2x"></i> <span>Pet friendly (deposit required) for our animal lovers! Walkable distance from DoubleTree Hilton where transportation will be provided from.</span>
+                    </div>
+                    <div class="price-row">
+                        Reference ID: <strong>Adams/Morales WB</strong>
+                    </div>
+                    <div class="price-btn-cont">
+                        CALL
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
     <!-- begin section -->
@@ -267,7 +287,7 @@
             <br>
             <div class="contact-form">
                 <div id="form-messages"></div>
-                <form id="ajax-contact" method="post" role="form" action="contact.php" data-toggle="validator">
+                <form id="ajax-contact" method="POST" role="form" action="php/mailer.php">
                     <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
                         <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
                         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -295,7 +315,7 @@
         </div>
     </section>
     <!-- begin section -->
-    <div class="footer">
+    <div class="footer" id="connect">
         <p>Connect With Us</p>
         <div class="social-links">
             <!--             <span><a href="https://www.linkedin.com/in/bradleyengelhardt" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></span>

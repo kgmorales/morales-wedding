@@ -7,21 +7,25 @@
     width: 100%;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
+    display:flex;
+    flex-direction:column;
 }
-.price-title{
-    background: #FF6363;
+.price-titles{
+    background: #CF5323;
     color: #FFF;
     padding: 2em 0;
     text-align: center;
     font-weight: bold;
     position: relative;
     text-transform: uppercase;
+    font-size:1.2em;
+    padding: 1.5em .5em;
     
     
 }
 .price-price{
     background: #f9f9f9;
-    padding: 1.5em 0;
+    padding: 1.5em .5em;
     text-align:center;
     
 }
@@ -46,22 +50,30 @@
 .price-row{
     padding: 1.5em .5em;
     background: #FF6363;
-    color:#fff;
     text-align:center;
+    flex:1;
     transition-property: all .25s linear 0s;
-}
-.price-row:hover{
-    text-align: inherit;
-    padding: 1.5em 4em;
-    background: #f9f9f9;
-    color:#333;
+    &:nth-child(odd){
+        background: #fff;
+    }
+    &:nth-child(even){
+        background:#f9f9f9;
+    }
+    p{
+        font-size:1em;
+    }
+    i {
+        color:#FF6363;
+    }
 }
 .price-row i{
     margin-right: 5px;
+    float:left;
 }
 .price-btn-cont{
-    padding: 1em 0;
+    padding: 1.5em .5em;
     text-align: center;
+    background:#fff;
 }
 
 
@@ -71,100 +83,12 @@
     max-width: 100%;
     *zoom: 1;
     display:flex;
+    flex-wrap:no-wrap;
 }
 
-.tables:before,
-.tables:after {
-    display: table;
-    content: "";
-    line-height: 0;
-}
-
-.column {
-    margin: 0 auto;
-    float: left;
-    min-height: 1px;
-    flex:1;
-    justify-content:center;
-}
-/* ––––––––––––––––––––––––––––––––––––––––––––––––––
-960px
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media only screen and (min-width: 960px) and (max-width: 1199px) {
-  .tables {
-        margin-right: auto;
-        margin-left: auto;
-        width: 960px;
-        *zoom: 1;
-    }
-    .tables:before,
-    .tables:after {
-        display: table;
-        content: "";
-        line-height: 0;
-    }
-    .tables:after {
-        clear: both;
-    }
-    .column {
-        margin: 0 16px 0 16px;
-        width: 288px;
-        float: left;
-        min-height: 1px;
-    }
-}
-/* ––––––––––––––––––––––––––––––––––––––––––––––––––
-TABLETS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .tables {
-        margin-right: auto;
-        margin-left: auto;
-        width: 768px;
-        *zoom: 1;
-    }
-    .tables:before,
-    .tables:after {
-        display: table;
-        content: "";
-        line-height: 0;
-    }
-    .tables:after {
-        clear: both;
-    }
-  .column {
-        margin: 0 14px 0 14px;
-        width: 228px;
-        float: left;
-        min-height: 1px;
-    }
-}
-/* ––––––––––––––––––––––––––––––––––––––––––––––––––
-MOBILE 100%
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media only screen and (max-width: 767px) {
-  .tables {
-        box-sizing: border-box;
-        margin-right: auto;
-        margin-left: auto;
-        padding-right: 10px;
-        padding-left: 10px;
-        width: 100%;
-        *zoom: 1;
-    }
-    .column{
-      display: block;
-        float: none;
-        box-sizing: border-box;
-        margin-left: 0;
-        width: 100%;
-    }
-}
-/* ––––––––––––––––––––––––––––––––––––––––––––––––––
-RETINA
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {}
+// .column {
+//     margin: 0 auto;
+//     min-height: 1px;
+//     flex:1;
+//     justify-content:center;
+// }

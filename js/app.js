@@ -63,8 +63,8 @@ $(document).ready(function() {
         });
     };
 
-    //ajax form
     $(function() {
+
         // Get the form.
         var form = $('#ajax-contact');
 
@@ -115,21 +115,6 @@ $(document).ready(function() {
 
     });
 
-    // // smooth scrolling
-    // $(function() {
-    //     $('a[href*=#]:not([href=#])').click(function() {
-    //         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    //             var target = $(this.hash);
-    //             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    //             if (target.length) {
-    //                 $('html,body').animate({
-    //                     scrollTop: target.offset().top
-    //                 }, 700);
-    //                 return false;
-    //             }
-    //         }
-    //     });
-    // });
     // initialize wow.js
     new WOW().init();
 
@@ -222,7 +207,7 @@ $(document).ready(function() {
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
-var myLatlng = new google.maps.LatLng(43.045466,-87.923418);
+var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
 
 
 function initialize() {
@@ -236,10 +221,10 @@ function initialize() {
     directionsDisplay.setMap(map);
 
     var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-    title: 'Morales Wedding'
-  });
+        position: myLatlng,
+        map: map,
+        title: 'Morales Wedding'
+    });
 }
 
 function calcRoute() {

@@ -1,182 +1,182 @@
-.nav-screen {
-    height: 100%;
-    z-index: 500;
-    position: fixed;
-    background-color: #000;
-    opacity: 1;
-    right: -285px;
-    /* start off behind the scenes */
-    -webkit-font-smoothing: antialiased;
-    position: fixed;
-    width: 285px;
-}
-
-.nav-screen .active {
-    display: block;
-}
-
-
-/* nav header links */
-
-nav {
-    margin: 0;
-    padding: 0;
-    background: #0E427D;
-    overflow: hidden;
-    z-index: 9;
-    width: 100%;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-    overflow: hidden;
-    display:none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 auto;
-    color: white;
-    padding: 5px;
-    font-size: 16px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-nav ul li a {
-    font-size:1em;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #FF6363;
-}
-
-// nav a:hover {
-//     color: #FF6363 !important;
-// }
-// nav {
-//     position: relative;
-//     left: 0;
+// .nav-screen {
+//     height: 100%;
 //     z-index: 500;
-//     padding: 10px;
-// }
-// .nav-brand img {
-//     width: 50px;
-// }
-// .fa-bars {
-//     color: #FF6363;
-//     float: right;
-//     padding: 20px;
 //     position: fixed;
-//     right: 0;
-//     z-index: 500;
-//     cursor: pointer;
-//     @include bp(xs) {
-//         display: block;
-//     }
-//     @include bp(sm) {
-//         display: none;
-//     }
+//     background-color: #000;
+//     opacity: 1;
+//     right: -285px;
+//     /* start off behind the scenes */
+//     -webkit-font-smoothing: antialiased;
+//     position: fixed;
+//     width: 285px;
 // }
-// .fa-times {
-//     color: #FF6363;
-//     float: right;
-//     padding: 20px;
-//     right: 0;
-//     z-index: 600;
-//     cursor: pointer;
+
+// .nav-screen .active {
+//     display: block;
 // }
+
+
+// /* nav header links */
+
 // nav {
-//     position: fixed;
-//     right: 15px;
-//     z-index: 800;
-//     @include bp(xs) {
-//         display: none;
-//     }
+//     margin: 0;
+//     padding: 0;
+//     background: #0E427D;
+//     overflow: hidden;
+//     z-index: 9;
+//     width: 100%;
 // }
-// nav li {
+
+// nav ul {
+//     list-style: none;
+//     text-align: center;
+//     overflow: hidden;
+//     display:none;
+// }
+
+// nav ul li {
+//     display: inline-block;
+//     margin: 0 auto;
 //     color: white;
-//     display: inline;
-//     float: right;
-//     padding: 15px;
+//     padding: 5px;
 //     font-size: 16px;
-// }
-// nav a {
-//     color: #757575;
-//     -webkit-transition: all 0.2s ease-in;
-// }
-// nav a:hover {
-//     color: #FF6363 !important;
+//     display:flex;
+//     justify-content:space-between;
+//     align-items:center;
 // }
 
-/* slide out nav menu styles */
+// nav ul li a {
+//     font-size:1em;
+//     color: #fff;
+//     text-decoration: none;
+//     text-transform: uppercase;
+//     transition: all 0.2s ease-in;
+// }
 
-.nav-container {
-    padding-top: 10%;
-}
+// nav ul li a:hover,
+// nav ul li a.active {
+//     color: #FF6363;
+// }
 
-.nav-links {
-    width: 250px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+// // nav a:hover {
+// //     color: #FF6363 !important;
+// // }
+// // nav {
+// //     position: relative;
+// //     left: 0;
+// //     z-index: 500;
+// //     padding: 10px;
+// // }
+// // .nav-brand img {
+// //     width: 50px;
+// // }
+// // .fa-bars {
+// //     color: #FF6363;
+// //     float: right;
+// //     padding: 20px;
+// //     position: fixed;
+// //     right: 0;
+// //     z-index: 500;
+// //     cursor: pointer;
+// //     @include bp(xs) {
+// //         display: block;
+// //     }
+// //     @include bp(sm) {
+// //         display: none;
+// //     }
+// // }
+// // .fa-times {
+// //     color: #FF6363;
+// //     float: right;
+// //     padding: 20px;
+// //     right: 0;
+// //     z-index: 600;
+// //     cursor: pointer;
+// // }
+// // nav {
+// //     position: fixed;
+// //     right: 15px;
+// //     z-index: 800;
+// //     @include bp(xs) {
+// //         display: none;
+// //     }
+// // }
+// // nav li {
+// //     color: white;
+// //     display: inline;
+// //     float: right;
+// //     padding: 15px;
+// //     font-size: 16px;
+// // }
+// // nav a {
+// //     color: #757575;
+// //     -webkit-transition: all 0.2s ease-in;
+// // }
+// // nav a:hover {
+// //     color: #FF6363 !important;
+// // }
 
-.nav-links ul {
-    margin-top: 15%;
-    text-align: center;
-    padding-top: 10%;
-}
+// /* slide out nav menu styles */
 
-.nav-links a {
-    color: #FFFFFF;
-    font-size: 2em;
-    line-height: 2;
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-}
+// .nav-container {
+//     padding-top: 10%;
+// }
 
-.nav-links a:hover {
-    color: #FF6363;
-    -webkit-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out;
-    -ms-transition: all 0.6s ease-in-out;
-    -moz-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
-}
+// .nav-links {
+//     width: 250px;
+//     text-align: center;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
 
-#fp-nav ul li .fp-tooltip {
-    color: #5F5F5F !important;
-}
+// .nav-links ul {
+//     margin-top: 15%;
+//     text-align: center;
+//     padding-top: 10%;
+// }
+
+// .nav-links a {
+//     color: #FFFFFF;
+//     font-size: 2em;
+//     line-height: 2;
+//     font-weight: bold;
+//     text-decoration: none;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// .nav-links a:hover {
+//     color: #FF6363;
+//     -webkit-transition: all 0.6s ease-in-out;
+//     -o-transition: all 0.6s ease-in-out;
+//     -ms-transition: all 0.6s ease-in-out;
+//     -moz-transition: all 0.6s ease-in-out;
+//     transition: all 0.6s ease-in-out;
+// }
+
+// #fp-nav ul li .fp-tooltip {
+//     color: #5F5F5F !important;
+// }
 
 
-/* Expanding border effect */
+// /* Expanding border effect */
 
-nav a::after {
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-    width: 0;
-    height: 2px;
-    background-color: #FF6363;
-    content: '';
-    opacity: 0;
-    -webkit-transition: width 0.6s, opacity 0.8s;
-    -moz-transition: width 0.6s, opacity 0.8s;
-    transition: width 0.6s, opacity 0.8s;
-}
+// nav a::after {
+//     display: block;
+//     margin: 0 auto;
+//     margin-top: 5px;
+//     width: 0;
+//     height: 2px;
+//     background-color: #FF6363;
+//     content: '';
+//     opacity: 0;
+//     -webkit-transition: width 0.6s, opacity 0.8s;
+//     -moz-transition: width 0.6s, opacity 0.8s;
+//     transition: width 0.6s, opacity 0.8s;
+// }
 
-nav a:hover::after,
-nav a:focus::after {
-    opacity: 1;
-    width: 100%;
-}
+// nav a:hover::after,
+// nav a:focus::after {
+//     opacity: 1;
+//     width: 100%;
+// }

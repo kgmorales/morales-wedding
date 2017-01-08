@@ -12,6 +12,7 @@ var gulp = require('gulp'),
   scsslint = require('gulp-scss-lint'),
   prefix = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
+  deploy = require('gulp-gh-pages'),
   uncss = require('gulp-uncss'),
   browserSync = require('browser-sync').create();
 
@@ -54,6 +55,11 @@ var PATHS = {
 //   gulp.src('scss/**/*.scss')
 //     .pipe(scsslint());
 // });
+
+gulp.task('deploy', ['jekyll-build'], function() {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy());
+});
 
 //throw error if scss breaks
 gulp.task('scss', function() {

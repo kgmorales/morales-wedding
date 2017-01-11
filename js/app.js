@@ -79,7 +79,7 @@ $(document).ready(function() {
     });
 
     //FAQ
-    $(".faq-q").click(function(e) {
+    $(".faq-q").click(function() {
         var container = $(this).parents(".faq-c");
         var answer = container.find(".faq-a");
         var trigger = container.find(".faq-t");
@@ -91,43 +91,62 @@ $(document).ready(function() {
         } else {
             trigger.addClass("faq-o");
         }
-        e.preventDefault();
     });
 
     //nav mobile
-    $('#toggle').on('click touchstart', function(e) {
+    $('#toggle').click(function() {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
-
-        e.preventDefault();
     });
-    $('nav ul li a').on('click touchstart', function(e) {
-        $('#overlay').removeClass('open');
+
+    $('.overlay-menu a').click(function(e) {
         $('#toggle').removeClass('active');
+        $('#overlay').removeClass('open');
 
         e.preventDefault();
     });
 
-    // handle links with @href started with '#' only
-    $('a[href^="#"]').bind('click.smoothscroll touchstart',function (e) {
+    $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
-      
-        var target = this.hash,
-        $target = $(target);
-      
+
+        var target = this.hash;
+        var $target = $(target);
+
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
+        }, 900, 'swing', function() {
             window.location.hash = target;
         });
     });
 
-    // Active Nav Link
-    //     $('nav ul li a').click(function() {
-    //         $(this).removeClass('active');
-    //         $(this).addClass('active');
-    //     });
 });
+
+// Page Scroll
+
+// Fixed Nav
+// $(window).scroll(function() {
+//     var scrollTop = 366;
+//     if ($(window).scrollTop() >= scrollTop) {
+//         $('nav').css({
+//             position: 'fixed',
+//             top: '0'
+//         });
+//         $('nav ul').css({
+//             display: 'flex'
+//         })
+//     }
+//     if ($(window).scrollTop() < scrollTop) {
+//         $('nav').removeAttr('style');
+//         $('nav ul').removeAttr('style');
+//     }
+// });
+
+// Active Nav Link
+// $('nav ul li a').click(function() {
+//     $('nav ul li a').removeClass('active');
+//     $(this).addClass('active');
+// });
+// });
 
 
 var directionsDisplay;

@@ -9,7 +9,6 @@ var gulp = require('gulp'),
   notify = require('gulp-notify'),
   plumber = require('gulp-plumber'),
   imagemin = require('gulp-imagemin'),
-  scsslint = require('gulp-scss-lint'),
   prefix = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
   deploy = require('gulp-gh-pages'),
@@ -46,15 +45,11 @@ gulp.task('serve', ['scss'], function() {
 var PATHS = {
   javascript: [
     'js/wow.js',
-    'js/jquery-easing.js',
+    'js/slick.js',
+    'js/easing.js',
     'js/app.js'
   ]
 };
-
-// gulp.task('scss-lint', function() {
-//   gulp.src('scss/**/*.scss')
-//     .pipe(scsslint());
-// });
 
 gulp.task('deploy', ['jekyll-build'], function() {
   return gulp.src("./dist/**/*")

@@ -19,9 +19,15 @@
 }
 
 .btn-table{
-    background: #34B484;
+    background: $salmon;
 }
 
 .btn-map{
     background: #FF6363;
+}
+
+.price-btn-cont{
+    padding: 1.5em .5em;
+    text-align: center;
+    background:#fff;
 }

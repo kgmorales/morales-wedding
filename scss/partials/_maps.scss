@@ -1,11 +1,22 @@
-#map-canvas{
-  height: 500px;
-  width:500px;
-  margin: 0 auto;
-  padding: 0px;
-  font-family: 'Gafata', sans-serif;
-  font-weight: bold;
+h2{
+  color:$salmon;
 }
+
+#map-canvas{
+  overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+#map-canvas iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
 
 #panel {
   top: 10px;
@@ -17,6 +28,7 @@
   input{
     width:100%;
     text-align:center;
+    border: 1px solid #e3e3e3;
   }
   label{
     font-size:1.5em;

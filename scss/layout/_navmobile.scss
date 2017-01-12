@@ -1,31 +1,32 @@
 .button_container {
     position: fixed;
     top: 5%;
-    right: 2%;
+    right: 5%;
     height: 27px;
     width: 35px;
     cursor: pointer;
     z-index: 101;
     transition: opacity .25s ease;
+    -webkit-backface-visibility: hidden;
     &:hover {
         opacity: .7;
     }
     &.active {
         .top {
             transform: translateY(11px) translateX(0) rotate(45deg);
-            background: #1abc9c;
+            background:$salmon;
         }
         .middle {
             opacity: 0;
-            background: #1abc9c;
+            background: $salmon;
         }
         .bottom {
             transform: translateY(-11px) translateX(0) rotate(-45deg);
-            background: #1abc9c;
+            background: $salmon;
         }
     }
     span {
-        background: #1abc9c;
+        background: $salmon;
         border: none;
         height: 5px;
         width: 100%;
@@ -111,10 +112,12 @@
                 color: #fff;
                 text-decoration: none;
                 overflow: hidden;
+                cursor: pointer;
                 &:hover:after,
                 &:focus:after,
                 &:active:after {
                     width: 100%;
+                    color: $salmon;
                 }
                 &:after {
                     content: '';
@@ -126,6 +129,7 @@
                     height: 3px;
                     background: #F5F5F5;
                     transition: .35s;
+                    color:$salmon;
                 }
             }
         }

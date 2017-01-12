@@ -19,7 +19,7 @@ $(document).ready(function() {
         setTimeout(countDownTimer, 1001);
     });
 
-    function timeToLaunch() {
+    var timeToLaunch = function() {
         // Get the current date
         var currentDate = new Date();
         // Find the difference between dates
@@ -36,7 +36,7 @@ $(document).ready(function() {
         sec = sec - min * 60;
     }
 
-    function countDownTimer() {
+    var countDownTimer = function() {
         // Figure out the time to launch
         timeToLaunch();
         // Write to countdown component
@@ -49,7 +49,7 @@ $(document).ready(function() {
         setTimeout(countDownTimer, 1000);
     }
 
-    function numberTransition(id, endPoint, transitionDuration, transitionEase) {
+    var numberTransition = function(id, endPoint, transitionDuration, transitionEase) {
         // Transition numbers from 0 to the final number
         $({ numberCount: $(id).text() }).animate({ numberCount: endPoint }, {
             duration: transitionDuration,
@@ -76,6 +76,31 @@ $(document).ready(function() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
 
     //FAQ
@@ -94,60 +119,37 @@ $(document).ready(function() {
     });
 
     //nav mobile
-    $('#toggle').click(function() {
+    $('#toggle').on('click touchstart', function(e) {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
+
+        e.preventDefault();
     });
 
-    $('.overlay-menu a').click(function(e) {
+    $('.overlay-menu a').on('click touchstart', function(e) {
         $('#toggle').removeClass('active');
         $('#overlay').removeClass('open');
 
         e.preventDefault();
+
     });
 
-    $('a[href^="#"]').on('click', function(e) {
-        e.preventDefault();
+//scroll for NAV
+$('a[href*=#]:not([href=#])').on('click touchstart', function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            || location.hostname == this.hostname) {
 
-        var target = this.hash;
-        var $target = $(target);
-
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function() {
-            window.location.hash = target;
-        });
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 0
+                }, 1000);
+                return false;
+            }
+        }
     });
-
 });
-
-// Page Scroll
-
-// Fixed Nav
-// $(window).scroll(function() {
-//     var scrollTop = 366;
-//     if ($(window).scrollTop() >= scrollTop) {
-//         $('nav').css({
-//             position: 'fixed',
-//             top: '0'
-//         });
-//         $('nav ul').css({
-//             display: 'flex'
-//         })
-//     }
-//     if ($(window).scrollTop() < scrollTop) {
-//         $('nav').removeAttr('style');
-//         $('nav ul').removeAttr('style');
-//     }
-// });
-
-// Active Nav Link
-// $('nav ul li a').click(function() {
-//     $('nav ul li a').removeClass('active');
-//     $(this).addClass('active');
-// });
-// });
-
 
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
@@ -155,7 +157,7 @@ var map;
 var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
 
 
-function initialize() {
+var initialize = function() {
     directionsDisplay = new google.maps.DirectionsRenderer();
     var mapOptions = {
         zoom: 18,
@@ -172,7 +174,7 @@ function initialize() {
     });
 }
 
-function calcRoute() {
+var calcRoute = function() {
     var start = document.getElementById('start').value;
     var end = 'Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233';
 

@@ -1,10 +1,12 @@
 //main section
-.welcome {
+.header {
     background: url("/images/bg.jpg") no-repeat center center;
     background-size: cover;
-    height:100vh;
-    display:flex;
+    overflow:hidden;
     -webkit-backface-visibility: hidden;
+    display:flex;
+    height:100vh;
+    width:auto;
     h1{
       @include bp(xs){
         font-size:14vw;
@@ -45,6 +47,10 @@
     @include bp(xs){
     width:90%;
     }
+}
+
+#rsvp{
+  overflow-x:hidden;
 }
 
 //Registry

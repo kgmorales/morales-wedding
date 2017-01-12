@@ -152,7 +152,7 @@ $('a[href*=#]:not([href=#])').on('click touchstart', function() {
 });
 
 var directionsDisplay;
-    directionsService = new google.maps.DirectionsService();
+var directionsService = new google.maps.DirectionsService();
 var map;
 var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
 

@@ -157,7 +157,7 @@ var map;
 var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
 
 
-var initialize = function() {
+var initMap = function() {
     directionsDisplay = new google.maps.DirectionsRenderer();
     var mapOptions = {
         zoom: 18,

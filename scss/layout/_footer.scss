@@ -4,12 +4,13 @@
     background-color: #484848;
     padding-top: 10px;
     text-align:center;
+    overflow-x:hidden;
 }
 
 .footer p {
     color: white;
     font-weight: bold;
-    font-size: 1em;
+    font-size: .75em;
 }
 
 .footer i {
@@ -24,4 +25,8 @@
 .social-links a:hover {
     color: white;
     transition: all 0.2s ease-in-out;
+}
+
+#copyright{
+    color:#1c1c1c;
 }

@@ -15,19 +15,24 @@
     -webkit-font-smoothing: antialiased;
     color: #fff;
     border-radius: 3px;
-    cursor:pointer;
-}
-
-.btn-table{
+    cursor: pointer;
     background: $salmon;
 }
 
-.btn-map{
-    background: #FF6363;
+.btn-table {
+    width: 50%;
 }
 
-.price-btn-cont{
+.btn-map {
+    padding-top: 10px;
+}
+
+.btn-rsvp {
+    width: 50%;
+}
+
+.price-btn-cont {
     padding: 1.5em .5em;
     text-align: center;
-    background:#fff;
+    background: #fff;
 }

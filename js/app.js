@@ -152,44 +152,45 @@ $(document).ready(function() {
 });
 
 var initMap = function() {
-    var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+    var directionsService = new google.maps.DirectionsService();
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    directionsDisplay.setMap(map);
     var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
-
-    directionsDisplay = new google.maps.DirectionsRenderer();
 
     var mapOptions = {
         zoom: 18,
         center: myLatlng
     }
-
-    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    directionsDisplay.setMap(map);
-
     var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
         title: 'Morales Wedding'
     });
+    var onChangeHandler = function() {
+          calcRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById('start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);
+      }
+
 }
 
-var calcRoute = function() {
+var calcRoute = function(directionsService, directionsDisplay) {
     var start = document.getElementById('start').value;
     var end = 'Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233';
-
-    var request = {
-        origin: start,
-        destination: end,
-        travelMode: google.maps.TravelMode.DRIVING
-    };
-
-    directionsService.route(request, function(response, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
+directionsService.route({
+          origin: start,
+          destination: end,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
             directionsDisplay.setDirections(response);
-        } else {
-            alert("Sorry, no driving route can be found between these locations");
-        }
-    });
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
 }
+
 
 // google.maps.event.addDomListener(window, 'load', initMap);

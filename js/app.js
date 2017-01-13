@@ -153,7 +153,6 @@ $(document).ready(function() {
 
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
-var map;
 
 var initMap = function() {
     var myLatlng = new google.maps.LatLng(43.045466, -87.923418);

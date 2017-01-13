@@ -7,6 +7,7 @@
     display:flex;
     height:100vh;
     width:auto;
+    text-align:center;
     h1{
       @include bp(xs){
         font-size:14vw;
@@ -46,7 +47,7 @@
 .aboutme p {
     font-weight: 100;
     margin:0 auto;
-    width:50%;
+    width:80%;
     @include bp(xs){
     width:90%;
     }

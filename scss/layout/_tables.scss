@@ -1,16 +1,18 @@
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 1200px
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 @import url(http://fonts.googleapis.com/css?family=Raleway);
-.pt{
-    margin:10px 0;
+.pt {
+    margin: 10px 0;
     width: 100%;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
-.price-titles{
+
+.price-titles {
     background: $salmon;
     color: #FFF;
     padding: 2em 0;
@@ -18,64 +20,69 @@
     font-weight: bold;
     position: relative;
     text-transform: uppercase;
-    font-size:1.2em;
+    font-size: 1.2em;
     padding: 1.5em .5em;
-    
-    
 }
-.price-price{
+
+.price-price {
     background: #f9f9f9;
     padding: 1.5em .5em;
-    text-align:center;
-    
+    text-align: center;
 }
-.price-price .num{
+
+.price-price .num {
     font-size: 45px;
     font-weight: bold;
 }
+
 .price-price sup {
-	bottom:30px;
-    line-height:5px;
-	vertical-align:baseline;
-	_vertical-align:bottom;
-	position:relative;
+    bottom: 30px;
+    line-height: 5px;
+    vertical-align: baseline;
+    _vertical-align: bottom;
+    position: relative;
 }
+
 .price-price sub {
-	top:10px;
-    line-height:5px;
-	vertical-align:baseline;
-	_vertical-align:bottom;
-	position:relative;
+    top: 10px;
+    line-height: 5px;
+    vertical-align: baseline;
+    _vertical-align: bottom;
+    position: relative;
 }
-.price-row{
+
+.price-row {
     padding: 1.5em .5em;
     background: #FF6363;
-    text-align:center;
-    flex:1;
+    text-align: center;
+    flex: 1;
     transition-property: all .25s linear 0s;
-    &:nth-child(odd){
+    font-size:1em;
+    &:nth-child(odd) {
         background: #fff;
     }
-    &:nth-child(even){
-        background:#f9f9f9;
+    &:nth-child(even) {
+        background: #f9f9f9;
     }
-    p{
-        font-size:1em;
+    p {
+        font-size: 1em;
     }
     i {
-        color:#FF6363;
+        color: #FF6363;
     }
 }
-.price-row i{
+
+.price-row i {
     margin-right: 5px;
-    float:left;
+    float: left;
 }
+
 .tables {
     margin-right: auto;
     margin-left: auto;
     max-width: 100%;
     *zoom: 1;
-    display:flex;
-    flex-wrap:no-wrap;
+    display: flex;
+    flex-wrap: no-wrap;
     -webkit-backface-visibility: hidden;
 }

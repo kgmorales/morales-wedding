@@ -14,6 +14,10 @@ body {
     font-family: 'Poiret One', cursive;
     -webkit-overflow-scrolling:touch;
     overflow-x:hidden;
+    @include bp(xlg) {
+         max-width: 1400px;
+         margin: 0 auto;
+     }
 
 }
 
@@ -32,7 +36,7 @@ a {
 }
 
 .titles {
-    margin-top: 1.5em;
+    margin-top: 1em;
     font-size:2em;
 }
 
@@ -48,7 +52,7 @@ h1 {
 }
 
 p {
-    font-size: 20px;
+    font-size: 1.5em;
     color: #484848;
 }
 
@@ -56,15 +60,21 @@ section {
     text-align: center;
     padding:.5em 0;
     overflow:auto;
+    &:nth-child(odd){
+        background:$grey;
+    }
+    &:nth-child(even){
+        background:$white;
+    }
 }
 
 img{
     width:100%;
 }
 
-#location{
-    background:#F2F2F2;
-}
+// #location{
+//     background:#F2F2F2;
+// }
 
 .content {
     margin:2em;

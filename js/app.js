@@ -149,10 +149,11 @@ $(document).ready(function() {
             }
         }
     });
-    var directionsDisplay;
-    var directionsService = new google.maps.DirectionsService();
-    var map;
 });
+
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
 
 var initMap = function() {
     var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
@@ -175,6 +176,7 @@ var initMap = function() {
 }
 
 var calcRoute = function() {
+    console.log('calcRout ran');
     var start = new google.maps.LatLng(54.986136, -1.537945);
   var end = new google.maps.LatLng(41.850033, -87.6500523);
 

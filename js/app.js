@@ -173,7 +173,6 @@ var initMap = function() {
         map: map,
         title: 'Morales Wedding'
     });
-    calcRoute();
 }
 
 var calcRoute = function() {

@@ -151,6 +151,7 @@ $('a[href*=#]:not([href=#])').on('click touchstart', function() {
         }
     });
 });
+directionsService = new google.maps.DirectionsService();
 
 var initMap = function() {
     var directionsDisplay;

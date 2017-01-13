@@ -170,8 +170,8 @@ function initMap() {
 google.maps.event.addDomListener(window, "load", initMap);
 
 function calcRoute(ref1, ref2) {
-    var start = String(ref1);
-    var end = String(ref2);
+    var start = document.getElementById('start').value;
+    var end = 'Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233';
     var args = {
         origin: start,
         destination: end,

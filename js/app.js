@@ -167,11 +167,10 @@ var initMap = function() {
         map: map,
         title: 'Morales Wedding'
     });
-    var onChangeHandler = function() {
-          calcRoute(directionsService, directionsDisplay);
+    var onClick = function() {
+          calcRoute();
         };
-        document.getElementById('start').addEventListener('change', onChangeHandler);
-        document.getElementById('end').addEventListener('change', onChangeHandler);
+        document.getElementById('start').addEventListener('click', onClickHandler);
       }
 
 }

@@ -151,90 +151,47 @@ $(document).ready(function() {
     });
 });
 
-var geocoder;
 var map;
+var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
-var directionsDisplay = new google.maps.DirectionsRenderer();
 
-function initMap() {
-    var map = new google.maps.Map(
-    document.getElementById("map-canvas"), {
-        center: new google.maps.LatLng(37.4419, -122.1419),
-        zoom: 13,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-    var directionsService = new google.maps.DirectionsService();
+var initMap = function() {
+    var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
+
+    directionsDisplay = new google.maps.DirectionsRenderer();
+
+    var mapOptions = {
+        zoom: 18,
+        center: myLatlng
+    }
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     directionsDisplay.setMap(map);
-    calcRoute("New York, NY", "Baltimore, MD");
-}
-google.maps.event.addDomListener(window, "load", initMap);
 
-function calcRoute(ref1, ref2) {
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'Morales Wedding'
+    });
+}
+
+var calcRoute = function() {
     var start = document.getElementById('start').value;
     var end = 'Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233';
-    var args = {
+
+    var request = {
         origin: start,
         destination: end,
         travelMode: google.maps.TravelMode.DRIVING
-    }
-    directionsService.route(args, function (response, status) {
+    };
+
+    directionsService.route(request, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(response);
-            var myroute = directionsDisplay.directions.routes[0];
-            var distance = 0;
-            for (i = 0; i < myroute.legs.length; i++) {
-                distance += myroute.legs[i].distance.value;
-                //for each 'leg'(route between two waypoints) we get the distance and add it to the total
-            }
-            document.getElementById('distance').innerHTML = distance +" meters";
         } else {
-            alert("fail");
+            alert("Sorry, no driving route can be found between these locations");
         }
     });
-
-};
-
-// var map;
-// var directionsDisplay;
-// var directionsService = new google.maps.DirectionsService();
-
-// var initMap = function() {
-//     var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
-
-//     directionsDisplay = new google.maps.DirectionsRenderer();
-
-//     var mapOptions = {
-//         zoom: 18,
-//         center: myLatlng
-//     }
-
-//     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-//     directionsDisplay.setMap(map);
-
-//     var marker = new google.maps.Marker({
-//         position: myLatlng,
-//         map: map,
-//         title: 'Morales Wedding'
-//     });
-// }
-
-// var calcRoute = function() {
-//     var start = document.getElementById('start').value;
-//     var end = 'Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233';
-
-//     var request = {
-//         origin: start,
-//         destination: end,
-//         travelMode: google.maps.TravelMode.DRIVING
-//     };
-
-//     directionsService.route(request, function(response, status) {
-//         if (status == google.maps.DirectionsStatus.OK) {
-//             directionsDisplay.setDirections(response);
-//         } else {
-//             alert("Sorry, no driving route can be found between these locations");
-//         }
-//     });
-// }
+}
 
 // google.maps.event.addDomListener(window, 'load', initMap);

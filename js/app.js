@@ -135,13 +135,12 @@ $(document).ready(function() {
 
     });
 
-//scroll for NAV
-$('a[href*=#]:not([href=#])').on('click touchstart', function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-            || location.hostname == this.hostname) {
+    //scroll for NAV
+    $('a[href*=#]:not([href=#])').on('click touchstart', function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
             var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html,body').animate({
                     scrollTop: target.offset().top - 0
@@ -151,13 +150,13 @@ $('a[href*=#]:not([href=#])').on('click touchstart', function() {
         }
     });
 });
-directionsService = new google.maps.DirectionsService();
 
-var initMap = function() {
-    var directionsDisplay;
+var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
-var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
+
+var initMap = function() {
+    var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
 
     directionsDisplay = new google.maps.DirectionsRenderer();
 
@@ -195,4 +194,4 @@ var calcRoute = function() {
     });
 }
 
-// google.maps.event.addDomListener(window, 'load', initMap);
+google.maps.event.addDomListener(window, 'load', initMap);

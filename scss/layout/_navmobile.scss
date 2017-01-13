@@ -91,6 +91,9 @@
         font-size: 1.5em;
         font-weight: 400;
         text-align: center;
+        @include bp(lg){
+            font-size:3em;
+        }
     }
     ul {
         list-style: none;

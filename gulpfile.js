@@ -47,8 +47,7 @@ var PATHS = {
     'js/wow.js',
     'js/slick.js',
     'js/easing.js',
-    'js/app.js',
-    'js/maps.js'
+    'js/app.js'
   ]
 };
 

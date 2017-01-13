@@ -152,14 +152,14 @@ $('a[href*=#]:not([href=#])').on('click touchstart', function() {
     });
 });
 
-var directionsDisplay;
- directionsService = new google.maps.DirectionsService();
+var initMap = function() {
+    var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
 var map;
 var myLatlng = new google.maps.LatLng(43.045466, -87.923418);
 
-
-var initMap = function() {
     directionsDisplay = new google.maps.DirectionsRenderer();
+
     var mapOptions = {
         zoom: 18,
         center: myLatlng

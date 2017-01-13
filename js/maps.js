@@ -12,7 +12,7 @@ var initMap = function() {
         center: myLatlng
     }
 
-    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     directionsDisplay.setMap(map);
 
     var marker = new google.maps.Marker({
@@ -23,34 +23,21 @@ var initMap = function() {
 }
 
 var calcRoute = function() {
-    console.log('calcRout ran');
-    var start = new google.maps.LatLng(54.986136, -1.537945);
-  var end = new google.maps.LatLng(41.850033, -87.6500523);
+    var start = document.getElementById('start').value;
+    var end = 'Grand Hall at Pabst Best Place 901 W Juneau Ave Milwaukee, WI 53233';
 
-  var request = {
-    origin:start,
-    destination:end,
-    travelMode: google.maps.TravelMode.DRIVING
-  };
-  console.log(request);
-  if (request==true)
-  {
-    console.log("REQUEST");
-  }
-  console.log(JSON.stringify(request)); 
-  directionsService.route(request, function(result, status) {
-    if (status == google.maps.DirectionsStatus.OK) {
-        if (!response.routes[0].copyrights) { 
-        response.routes[0].copyrights = "Copyrights unknown."; 
+    var request = {
+        origin: start,
+        destination: end,
+        travelMode: google.maps.TravelMode.DRIVING
+    };
+
+    directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        } else {
+            alert("Sorry, no driving route can be found between these locations");
         }
-        console.log("ALL GOOD!");
-      directionsDisplay.setDirections(result);
-    }
-    else
-    {
-        console.log("NOT-GOOD!");
-    }
-  });
+    });
 }
-
-// google.maps.event.addDomListener(window, 'load', initMap);
+google.maps.event.addDomListener(window, 'load', initMap);

@@ -59,10 +59,17 @@
 
 //Registry
 .logo{
-  padding:.5em;
+  padding:1em;
   img{
     width:50%;
+    @include bp(sm){
+      width:50%;
+    }
   }
+}
+
+.amazon {
+  padding-top:1.5em;
 }
 
 .fa-envelope{

@@ -49,6 +49,7 @@ var PATHS = {
     ]
 };
 
+//deploy to gh-pages
 gulp.task('deploy', ['jekyll-build'], function() {
     return gulp.src("./dist/**/*")
         .pipe(deploy());
@@ -104,6 +105,7 @@ gulp.task('images', function() {
         .pipe(gulp.dest('dist/images'));
 });
 
+//gulp commands
 gulp.task('default', ['clean'], function() {
     gulp.start('scss', 'js', 'images', 'serve');
 });

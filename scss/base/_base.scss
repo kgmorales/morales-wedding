@@ -12,14 +12,13 @@
 
 body {
     font-family: 'Poiret One', cursive;
-    -webkit-overflow-scrolling:touch;
-    overflow-x:hidden;
-    height:auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    height: auto;
     @include bp(xlg) {
-         max-width: 1400px;
-         margin: 0 auto;
-     }
-
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
 
 ul {
@@ -32,19 +31,19 @@ a {
 }
 
 .headline {
-    color: white;
+    color: $white;
     font-size: 6vw;
 }
 
 .titles {
     margin-top: 1em;
-    font-size:2em;
+    font-size: 2em;
 }
 
 .date {
-    color: white;
+    color: $white;
     font-family: 'Dancing Script', cursive;
-    font-size:1.5em;
+    font-size: 1.5em;
 }
 
 h1 {
@@ -59,28 +58,23 @@ p {
 
 section {
     text-align: center;
-    padding:.5em 0;
-    overflow:auto;
-    &:nth-child(odd){
-        background:$grey;
+    padding: .5em 0;
+    overflow: auto;
+    &:nth-child(odd) {
+        background: $grey;
     }
-    &:nth-child(even){
-        background:$white;
+    &:nth-child(even) {
+        background: $white;
     }
 }
 
-img{
-    width:100%;
+img {
+    width: 100%;
 }
-
-// #location{
-//     background:#F2F2F2;
-// }
 
 .content {
-    margin:2em;
+    margin: 2em;
 }
-
 
 .hidden {
     display: none !important;

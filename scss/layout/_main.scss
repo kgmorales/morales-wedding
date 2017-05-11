@@ -9,7 +9,7 @@
     text-align:center;
     h1{
       @include bp(xs){
-        font-size:14vw;
+        font-size:20px;
       }
     }
 }
@@ -68,7 +68,7 @@
   }
 }
 
-.amazon {
+.registry {
   padding-top:1.5em;
 }
 

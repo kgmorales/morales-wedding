@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     uncss = require('gulp-uncss'),
     browserSync = require('browser-sync').create(),
     config = {
-    publicDir: './public',
+    publicDir: './public'
 };
 
 //Clean dist folder for each build

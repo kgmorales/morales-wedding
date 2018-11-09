@@ -15,6 +15,7 @@ body {
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     height: auto;
+
     @include bp(xlg) {
         max-width: 1400px;
         margin: 0 auto;
@@ -33,6 +34,12 @@ a {
 .headline {
     color: $white;
     font-size: 6vw;
+}
+.missed-date h2{
+    font-size:2em;
+}
+.missed-date h3{
+    color: $white;
 }
 
 .titles {
@@ -60,9 +67,11 @@ section {
     text-align: center;
     padding: .5em 0;
     overflow: auto;
+
     &:nth-child(odd) {
         background: $grey;
     }
+
     &:nth-child(even) {
         background: $white;
     }

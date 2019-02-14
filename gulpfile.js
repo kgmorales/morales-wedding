@@ -36,7 +36,7 @@ gulp.task('serve', ['scss'], function() {
     gulp.watch('scss/**/*.scss', ['scss']);
     gulp.watch('js/*.js', ['js']);
     gulp.watch('images/*', ['images']);
-    gulp.watch('index.html').on('change', browserSync.reload);
+    gulp.watch('index.html, valentines-day.html').on('change', browserSync.reload);
 });
 
 //paths to bower_components
@@ -45,7 +45,8 @@ var PATHS = {
         'js/wow.js',
         'js/slick.js',
         'js/easing.js',
-        'js/app.js'
+        'js/app.js',
+        'js/hearts.js'
     ]
 };
 

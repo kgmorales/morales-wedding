@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "dependencies": {
     "caniuse-db": "^1.0.30000906",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "npm": "^6.4.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",

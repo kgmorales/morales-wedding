@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "caniuse-db": "^1.0.30000906",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "npm": "^6.4.1"
   },
   "devDependencies": {
